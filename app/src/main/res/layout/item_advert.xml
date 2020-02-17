@@ -12,7 +12,7 @@
     >
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -25,11 +25,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@id/bHide"
+        app:layout_constraintEnd_toStartOf="@id/btn_hide"
         />
 
     <Button
-        android:id="@+id/bHide"
+        android:id="@+id/btn_hide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Скрыть"
