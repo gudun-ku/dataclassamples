@@ -27,6 +27,7 @@ class FeedActivity : AppCompatActivity() {
         bindRecycler()
     }
 
+
     private fun initPresentationModel() {
         presentation = ViewModelProviders.of(this)[FeedPresentationModel::class.java]
         presentation.modelLiveData.observe(this, Observer { model: FeedViewModel ->
@@ -44,8 +45,8 @@ class FeedActivity : AppCompatActivity() {
     }
 
     private fun getDiffAdapter(): DiffUtilCompositeAdapter = DiffUtilCompositeAdapter.Builder()
-        .add(OfferAdapter {})
-        .add(AdvertAdapter {})
+        .add(OfferAdapter(presentation::onOfferClicked))
+        .add(AdvertAdapter (presentation::onHideAdvertClicked))
         .add(DividerAdapter)
         .build()
 
